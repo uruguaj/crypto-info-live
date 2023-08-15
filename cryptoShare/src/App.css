@@ -1,0 +1,34 @@
+img{
+    height: 5rem;
+    width: 5rem;
+    padding: 5rem;
+
+}
+
+body{
+    background-color:  #101820;
+}
+
+h1{
+    color: #FBEAEB;
+    margin-top: 2.5rem;
+}
+.home{
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+.href{
+    text-decoration: none;
+    color: #FEE715;
+}
+.footer {
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+h2{
+    margin-top: 20%;
+}

@@ -1,0 +1,24 @@
+.single-coin-page{
+    text-align: center;
+}
+
+h2{
+    color: white;
+    /*margin: 3rem;*/
+}
+.coinInfo{
+    margin: 1rem;
+}
+
+.single-coin-page-route-button, .coin-name{
+    color: #FEE715;
+}
+
+.single-coin-page-route-button{
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
