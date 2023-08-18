@@ -2,6 +2,7 @@
 import './coin.css'
 import {useEffect, useState} from "react";
 import axios from "axios";
+ import Background from "../background/background.jsx";
 
 const Coin = () => {
 
@@ -20,7 +21,8 @@ const Coin = () => {
         return(
 
             <div className='single-coin-page'>
-                <h1>Your Coin Is <span className='coin-name'>{coinData.name}</span> </h1>
+            <Background/>
+                <h1>You selected : <span className='coin-name'>{coinData.name}</span> </h1>
                 <img src={coinData.image.large} alt='coin'/>
                 <h2 className='coinInfo'>Symbol : {coinData.symbol.toUpperCase()}</h2>
                 <h2 className='coinInfo'>Current price : {coinData.market_data.current_price.usd} $</h2>
@@ -38,6 +40,7 @@ const Coin = () => {
     } else {
         return (
             <div className='loading'>
+                <Background/>
                 <h1> Loading ... </h1>
                 <h3>Please wait!</h3>
                 <span>Are you here long? </span>
