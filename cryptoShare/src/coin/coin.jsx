@@ -3,19 +3,12 @@ import './coin.css'
 import {useEffect, useState} from "react";
 import axios from "axios";
  import Background from "../background/background.jsx";
+ import useFetchCoins from "../hooks/UseFetchCoins.jsx";
 
 const Coin = () => {
 
-    const { id } = useParams()
-
-    const [coinData, setCoinData] = useState(null)
-
-    useEffect(() => {
-        axios.get(`https://api.coingecko.com/api/v3/coins/${id}`)
-            .then((res) => {
-                setCoinData(res.data);
-            })
-    }, []);
+	const { id } = useParams();
+	const coinData = useFetchCoins(id);
 
     if (coinData){
         return(
@@ -28,8 +21,6 @@ const Coin = () => {
                 <h2 className='coinInfo'>Current price : {coinData.market_data.current_price.usd} $</h2>
                 <h2 className='coinInfo'>24 hours high : {coinData.market_data.high_24h.usd} $ </h2>
                 <h2 className='coinInfo'>24 hours low : {coinData.market_data.low_24h.usd} $</h2>
-
-
                 <Link to="/">
                     <button className="single-coin-page-route-button">Back to Home!</button>
                 </Link>
